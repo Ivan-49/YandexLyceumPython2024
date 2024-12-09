@@ -5,6 +5,6 @@ if a < b:
     print(n)
     exit()
 while not abs(a - b) <= 0.01:
-    a = (b ** 2 + (a - b) ** 2) ** 0.5
+    a = (b**2 + (a - b) ** 2) ** 0.5
     n += 1
 print(n)

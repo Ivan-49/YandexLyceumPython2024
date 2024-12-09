@@ -1,4 +1,4 @@
-if 'кот' in input():
-    print('МЯУ')
+if "кот" in input():
+    print("МЯУ")
 else:
-    print('ГАВ')
+    print("ГАВ")

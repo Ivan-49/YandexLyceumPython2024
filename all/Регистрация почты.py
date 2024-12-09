@@ -1,9 +1,9 @@
 login = input()
 adress = input()
 
-if '@' in login:
+if "@" in login:
     print("Некорректный логин")
-elif not ('@' in adress):
+elif not ("@" in adress):
     print("Некорректный адрес")
 else:
-    print('OK')
+    print("OK")

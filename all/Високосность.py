@@ -10,6 +10,6 @@ def main():
     result = "Високосный" if is_leap_year(year) else "Не високосный"
     print(result)
 
-    
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

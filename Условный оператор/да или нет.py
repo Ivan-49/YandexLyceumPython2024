@@ -5,4 +5,3 @@ if first_string in valid_words and second_string in valid_words:
     print("ВЕРНО")
 else:
     print("НЕВЕРНО")
-

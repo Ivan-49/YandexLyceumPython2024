@@ -1,8 +1,8 @@
 num = float(input())
 
 if num > 0:
-    print('+')
+    print("+")
 elif not (num):
-    print('0')
+    print("0")
 else:
-    print('-')
+    print("-")

@@ -13,4 +13,4 @@ while True:
     user = int(input())
     if user == 0:
         break
-print(count)    
+print(count)

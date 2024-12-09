@@ -1,13 +1,13 @@
 def is_power_of_two(n):
     if n < 1:
         return "НЕТ"
-    power = 0 
+    power = 0
 
     while (1 << power) < n:
         power += 1
-    
+
     if (1 << power) == n:
-        return power        
+        return power
     else:
         return "НЕТ"
 

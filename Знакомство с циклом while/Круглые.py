@@ -1,4 +1,4 @@
 user = input()
-while user[-1] == '0':
+while user[-1] == "0":
     print(user)
     user = input()

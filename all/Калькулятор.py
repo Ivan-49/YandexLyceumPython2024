@@ -2,12 +2,12 @@ num1 = float(input())
 num2 = float(input())
 str_ = input()
 
-if str_ in ['+', '-', '*', '/']:
-    if str_ == '+':
+if str_ in ["+", "-", "*", "/"]:
+    if str_ == "+":
         print(num1 + num2)
-    elif str_ == '-':
+    elif str_ == "-":
         print(num1 - num2)
-    elif str_ == '*':
+    elif str_ == "*":
         print(num1 * num2)
     else:
         if num2 == 0.0:

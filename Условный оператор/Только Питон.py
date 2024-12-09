@@ -1,6 +1,6 @@
 a = input()
 
-if a == 'Python':
+if a == "Python":
     print("ДА")
 else:
     print("НЕТ")

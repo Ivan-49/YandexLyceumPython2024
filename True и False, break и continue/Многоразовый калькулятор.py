@@ -5,16 +5,16 @@ while True:
     op = input()
     try:
         result = {
-            '+': lambda x: x + int(input()),
-            '-': lambda x: x - int(input()),
-            '*': lambda x: x * int(input()),
-            '/': lambda x: x // int(input()),
-            '%': lambda x: x % int(input()),
-            '!': lambda x: factorial(x),
-            'x': lambda x: x
+            "+": lambda x: x + int(input()),
+            "-": lambda x: x - int(input()),
+            "*": lambda x: x * int(input()),
+            "/": lambda x: x // int(input()),
+            "%": lambda x: x % int(input()),
+            "!": lambda x: factorial(x),
+            "x": lambda x: x,
         }[op](num1)
         print(result)
-        if op == 'x':
+        if op == "x":
             break
     except Exception:
         continue

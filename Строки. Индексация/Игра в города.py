@@ -1,5 +1,5 @@
 user: str = input()
-last = user 
+last = user
 while True:
     user = input()
     if user[0] != last[-1]:

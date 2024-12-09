@@ -1,4 +1,4 @@
 if input():
-    print('НЕТ')
+    print("НЕТ")
 else:
-    print('ДА')
+    print("ДА")

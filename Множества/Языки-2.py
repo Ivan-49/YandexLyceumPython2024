@@ -19,4 +19,4 @@ count = eng + german + france - 2 * two_lang - len(students)
 if count > 0:
     print(count)
 else:
-    print('NO')
+    print("NO")

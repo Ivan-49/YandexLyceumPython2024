@@ -1,8 +1,8 @@
-lst = [input() + ' ' for _ in range(3)]
-lst = ''.join(lst)
+lst = [input() + " " for _ in range(3)]
+lst = "".join(lst)
 
 
-if lst == 'раз два три ':
-    print('ГОРИ')
+if lst == "раз два три ":
+    print("ГОРИ")
 else:
-    print('НЕ ГОРИ')
+    print("НЕ ГОРИ")

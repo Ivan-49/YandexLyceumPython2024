@@ -7,15 +7,8 @@ while True:
         break
 
     head = input()
-    if head == 'запад' or head == 'восток':
-        x = {
-            'восток': lambda n: x + n,
-            'запад': lambda n: x - n
-        }[head](int(input()))
-    if head == 'север' or head == 'юг':
-        y = {
-            'север': lambda n: y + n,
-            'юг': lambda n: y - n
-        }[head](int(input()))
+    if head == "запад" or head == "восток":
+        x = {"восток": lambda n: x + n, "запад": lambda n: x - n}[head](int(input()))
+    if head == "север" or head == "юг":
+        y = {"север": lambda n: y + n, "юг": lambda n: y - n}[head](int(input()))
     steps = steps + 1
-

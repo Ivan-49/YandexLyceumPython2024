@@ -1,4 +1,4 @@
-a = False 
+a = False
 line = 0
 while True:
     while a is False:
