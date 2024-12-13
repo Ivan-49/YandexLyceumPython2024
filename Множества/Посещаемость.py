@@ -1,4 +1,3 @@
-
 list_ = []
 for i in range(int(input())):
     a = []
