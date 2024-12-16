@@ -1,16 +1,7 @@
-accuracy = int(input())
-pi = 4.0
-sign = -1
-denominator = 2
-precision = 0.1**accuracy
+n = int(input())
+result = 0
 
-while True:
-    term = 4 / (denominator * (denominator + 1) * (denominator + 2)) * sign
-    pi += term
-    sign *= -1
-    denominator += 2
-    if abs(term) < precision:
-        break
+for i in range(0, n):
+    result += ((- 1) ** i)/(2 * i + 1)
 
-
-print(pi)
+print(result * 4)
