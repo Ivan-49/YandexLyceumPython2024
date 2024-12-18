@@ -1,26 +1,20 @@
 user = input()
-users = []
+users_list = []
 
 while user:
     user = user.split(':')
-    print(user)
-    user_a = {
-        'login':user[0],
-        'password':user[1],
-        'number':user[2],
-        'number_group':user[3],
-        'desciption':user[4],
-        'home_dir':user[5],
-        'shell':user[6]
+    user_data = {
+        'login': user[0],
+        'password': user[1],
+        'number': user[2],
+        'number_group': user[3],
+        'desciption': user[4],
+        'home_dir': user[5],
+        'shell': user[6]
     }
-    users.append(user_a)
+    users_list.append(user_data)
     user = input()
-    
-
-
 passwords = input().split(';')
-
-for user in users:
-    if user['password'] in passwords:
-        print('To:' + user['login'])
-        print(user['desciption'].split(', ')[0]+ ', ваш пароль слишком простой, смените его.')
+[print(f'To: {user['login']}\n{user["desciption"].split(
+    ",")[0]}, ваш пароль слишком простой, смените его.') for user in users_list if user[
+    'password'] in passwords]
