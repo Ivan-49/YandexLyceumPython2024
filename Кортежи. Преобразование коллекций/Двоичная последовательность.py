@@ -1,10 +1,10 @@
 user, nomer_posl = int(input()), int(input())
- 
-for i in range(nomer_posl-1):
-    chslo = user 
+
+for i in range(nomer_posl - 1):
+    chslo = user
     a = 0
     while chslo:
-        a += chslo%2
+        a += chslo % 2
         chslo >>= 1
     b = a
     while b:

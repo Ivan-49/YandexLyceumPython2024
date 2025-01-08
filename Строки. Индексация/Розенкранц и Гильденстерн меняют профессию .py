@@ -1,1 +1,1 @@
-print(len(max(input().split('р'))))
+print(len(max(input().split("р"))))

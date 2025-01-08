@@ -7,7 +7,7 @@ def calculate_fractional_part(number):
         remainders.append(remainder)
         digits.append(remainder * 10 // number)
         remainder = 10 * remainder % number
-    
+
     start_index = remainders.index(remainder)
     return "".join(map(str, digits[start_index:]))
 

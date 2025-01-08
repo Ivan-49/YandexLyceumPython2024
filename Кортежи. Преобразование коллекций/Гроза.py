@@ -7,7 +7,9 @@ for _ in range(num_items):
 
 for i in range(num_items):
     for j in range(i + 1, num_items):
-        if items[j][0] > items[i][0] or (items[j][0] == items[i][0] and items[j][1] > items[i][1]):
+        if items[j][0] > items[i][0] or (
+            items[j][0] == items[i][0] and items[j][1] > items[i][1]
+        ):
             items[i], items[j] = items[j], items[i]
 
 for item in items:

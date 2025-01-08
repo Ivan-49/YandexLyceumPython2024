@@ -23,13 +23,13 @@ def city() -> list:
     user = input()
     if user in city_set:
         return True
-    else:   
+    else:
         return False
     return city_set
 
 
-def main() -> None:    
-    res = city() 
+def main() -> None:
+    res = city()
     match res:
         case True:
             print("TRY ANOTHER")

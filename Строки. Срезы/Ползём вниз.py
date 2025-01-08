@@ -7,13 +7,13 @@ if len(user_way) == 1:
     exit()
 for i in way:
     if i:
-        if i == 'V':
+        if i == "V":
             print(user_way[0])
             break
         else:
             break
 for i in way:
-    
+
     if not i:
         continue
     elif i[0] == "<":

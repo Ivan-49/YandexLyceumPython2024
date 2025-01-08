@@ -1,1 +1,1 @@
-print(*input().split(), sep = '\n')
+print(*input().split(), sep="\n")

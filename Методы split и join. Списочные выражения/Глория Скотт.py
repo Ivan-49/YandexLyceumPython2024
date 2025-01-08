@@ -1,1 +1,1 @@
-print(' '.join((input().split()[2::3])))
+print(" ".join((input().split()[2::3])))

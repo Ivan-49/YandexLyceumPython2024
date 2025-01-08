@@ -126,7 +126,7 @@ data = """Хан Ган	2024г.	Кванджу, Южная Корея
 
 
 def extract_name_year(data):
-    lines = data.strip().split('\n')
+    lines = data.strip().split("\n")
     authors = {}
     for line in lines:
         match = re.match(r"(.+)\s+(\d{4}г\.)\s+.+", line)

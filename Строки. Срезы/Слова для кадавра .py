@@ -89,7 +89,7 @@ for word in words:
                         res2 += word[-k]
             count_kon += 1
         if not (len(res1) + len(res2) == len(word)):
-            
+
             res3 = word[count_nach:-count_kon]
             if count_kon == 0:
                 res3 = word[count_nach:]

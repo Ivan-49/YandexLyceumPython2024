@@ -8,6 +8,5 @@ teams = sorted(
 )
 
 cutoff = math.ceil(len(teams) / 2)
-print(*sorted(t[0] for t in teams[:cutoff]), sep='\n')
-print(*sorted(t[0] for t in teams[cutoff:]), sep='\n')
-
+print(*sorted(t[0] for t in teams[:cutoff]), sep="\n")
+print(*sorted(t[0] for t in teams[cutoff:]), sep="\n")

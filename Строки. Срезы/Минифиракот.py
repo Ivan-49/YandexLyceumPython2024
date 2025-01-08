@@ -47,4 +47,3 @@ lines = [input() for _ in range(n)]
 minified_lines = minify_code(lines)
 for line in minified_lines:
     print(line)
-
