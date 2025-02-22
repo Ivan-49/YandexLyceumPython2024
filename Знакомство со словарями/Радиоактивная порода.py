@@ -1,50 +1,46 @@
-def calculate_decay(input_pairs, key_list, initial_values, normal_value):
-    pairs = [
-        (input_pairs[i * 2], int(input_pairs[i * 2 + 1]))
-        for i in range(len(input_pairs) // 2)
-    ]
-    decay_rates = dict(pairs)
-    value_dict = {key: [] for key in key_list}
+elements = [x for x in input().split()]
+pairs = [(elements[i * 2], int(elements[i * 2 + 1])) for i in range(len(elements) // 2)]
+decay_dict = {}
+main_decay = dict(pairs)
+current_decay = main_decay.copy()
 
-    for i, key in enumerate(key_list):
-        value_dict[key].append([initial_values[i]])
+key_sequence = [x for x in input().split()]
+for key in key_sequence:
+    if key not in decay_dict:
+        decay_dict[key] = []
 
-    gcd_val = list(decay_rates.values())[0]
+decay_values = [float(x) for x in input().split()]
 
-    for val in list(decay_rates.values())[1:]:
-        a, b = int(gcd_val), int(val)
+for i, key in enumerate(key_sequence):
+    if [] not in decay_dict[key]:
+        decay_dict[key].append([])
 
-        while a:
-            a, b = b % a, a
-        gcd_val = b
+    decay_dict[key][decay_dict[key].index([])].append(decay_values[i])
 
-    time = 0
+total_decay = float(input())
+gcd = int(list(main_decay.values())[0])
 
-    total_sum = sum(sum(sum(value_dict.values(), []), []))
+for value in list(main_decay.values())[1:]:
+    a, b = gcd, value
+    while a != 0:
+        a, b = b % a, a
+    gcd = b
 
-    while normal_value < total_sum:
-        time += gcd_val
+current_time = 0
 
-        for key, decay in decay_rates.items():
-            if not time % decay and key in value_dict:
-                for sublist in value_dict[key]:
-                    for i in range(len(sublist)):
-                        sublist[i] /= 2
+while total_decay < sum(sum(sum(list(decay_dict.values()), []), [])):
+    current_time += gcd
+    for key in main_decay.keys():
+        if not current_time % main_decay[key] and key in decay_dict:
+            for i in range(len(decay_dict[key])):
+                for j in range(len(decay_dict[key][i])):
+                    decay_dict[key][i][j] /= 2
 
-        total_sum = sum(sum(sum(value_dict.values(), []), []))
+results = []
 
-    result_values = [value_dict[key][0][0] for key in key_list]
+for key in key_sequence:
+    results.append(decay_dict[key][0][0])
+    del decay_dict[key][0]
 
-    return time, " ".join(map(str, result_values))
-
-
-if __name__ == "__main__":
-
-    input_pairs = input().split()
-    key_list = input().split()
-    initial_values = [float(x) for x in input().split()]
-    normal_value = float(input())
-    time, result = calculate_decay(input_pairs, key_list, initial_values, normal_value)
-
-    print(time)
-    print(result)
+print(current_time)
+print(" ".join(map(str, results)))
